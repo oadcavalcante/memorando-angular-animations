@@ -18,7 +18,7 @@ import { Tarefa } from '../interface/tarefa';
           border: '2px solid #B2B6FF',
         })
       ),
-      state('highlighted', style({ border: '4px solid #B2B6FF' })),
+      state('highlighted', style({ border: '4px solid #B2B6FF', filter: 'brightness(92%)' })),
     ]),
   ],
 })
@@ -27,6 +27,7 @@ export class ListaTarefasComponent implements OnInit {
   formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
+  indexTarefa: number = -1; //-1 para que nenhuma tarefa inicie destacada(highlighted)
 
   formulario: FormGroup = this.fomBuilder.group({
     id: [0],
