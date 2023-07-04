@@ -1,4 +1,4 @@
-import { trigger, state, style } from '@angular/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -18,7 +18,16 @@ import { Tarefa } from '../interface/tarefa';
           border: '2px solid #B2B6FF',
         })
       ),
-      state('highlighted', style({ border: '4px solid #B2B6FF', filter: 'brightness(92%)' })),
+      state(
+        'highlighted',
+        style({ border: '4px solid #B2B6FF', filter: 'brightness(92%)' })
+      ),
+      transition('default => highlighted', [
+        style({
+          transform: 'scale(1.02)',
+        }),
+        animate('200ms'),
+      ]),
     ]),
   ],
 })
