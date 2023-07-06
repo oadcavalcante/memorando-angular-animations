@@ -11,14 +11,14 @@
       "id": 2,
       "descricao": "Estudar sobre acessibilidade",
       "categoria": "Trabalho",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "prioridade": "Normal"
     },
     {
       "id": 4,
       "descricao": "Preencher formulário de inscrição",
       "categoria": "Estudos",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "prioridade": "Normal"
     },
     {
@@ -38,7 +38,7 @@
     {
       "id": 7,
       "descricao": "Cadastrar produtos na loja",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "categoria": "Trabalho",
       "prioridade": "Alta"
     }

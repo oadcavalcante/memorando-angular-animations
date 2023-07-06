@@ -29,7 +29,8 @@ export const highlightedStateTrigger = trigger('highlightedState', [
 ]);
 
 export const showStateTrigger = trigger('showState', [
-  transition(':enter', [ // :enter -> quando o elemento entra no dom.
+  transition(':enter', [
+    // :enter -> quando o elemento entra no dom.
     style({
       opacity: 0,
     }),
@@ -40,11 +41,23 @@ export const showStateTrigger = trigger('showState', [
       })
     ),
   ]),
-  transition(':leave', [ // :leave -> quando o elemento sai do dom.
+  transition(':leave', [
+    // :leave -> quando o elemento sai do dom.
     animate(
       300,
       style({
         opacity: 0,
+      })
+    ),
+  ]),
+]);
+
+export const checkButtonTrigger = trigger('checkButton', [
+  transition('* => checked', [
+    animate(
+      '300ms ease-in',
+      style({
+        transform: 'scale(0.4)',
       })
     ),
   ]),
