@@ -4,6 +4,7 @@ import {
   style,
   transition,
   animate,
+  keyframes,
 } from '@angular/animations';
 
 export const highlightedStateTrigger = trigger('highlightedState', [
@@ -69,18 +70,19 @@ export const filterTrigger = trigger('filterAnimation', [
       opacity: 0,
       width: 0,
     }),
+    animate('1000ms ease-out', keyframes([
+      style({offset: 0, opacity: 0, width: 0}),
+      style({offset: 0.8, opacity: 0.5, width: '*', backgroundColor: 'lightgrey'}),
+      style({offset: 1,opacity: 1, width: '*', backgroundColor: 'lightblue'}),
+    ])),
+  ]),
+  transition(':leave', [
     animate(
       '400ms ease-out',
       style({
-        opacity: 1,
-        width: '*',
+        opacity: 0,
+        width: 0,
       })
     ),
-  ]),
-  transition(':leave', [
-    animate('400ms ease-out', style({
-      opacity: 0,
-      width: 0
-    }))
   ]),
 ]);
