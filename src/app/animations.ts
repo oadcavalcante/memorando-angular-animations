@@ -89,3 +89,17 @@ export const filterTrigger = trigger('filterAnimation', [
     ),
   ]),
 ]);
+
+export const formButtonTrigger = trigger('formButton', [
+  transition('invalid => valid', [
+    animate(600, style([{
+      backgroundColor: '#63B77C'
+    }])),
+    animate(100, style([{
+      transform: 'scale(1.1)'
+    }])),
+    animate(200, style([{
+      transform: 'scale(1)'
+    }]))
+  ])
+]);
