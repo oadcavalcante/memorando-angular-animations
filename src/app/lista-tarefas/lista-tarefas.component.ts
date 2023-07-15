@@ -10,13 +10,21 @@ import {
   checkButtonTrigger,
   filterTrigger,
   formButtonTrigger,
+  shakeTrigger,
 } from '../animations';
 
 @Component({
   selector: 'app-lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
   styleUrls: ['./lista-tarefas.component.css'],
-  animations: [highlightedStateTrigger, showStateTrigger, checkButtonTrigger, filterTrigger, formButtonTrigger],
+  animations: [
+    highlightedStateTrigger,
+    showStateTrigger,
+    checkButtonTrigger,
+    filterTrigger,
+    formButtonTrigger,
+    shakeTrigger,
+  ],
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
@@ -32,8 +40,8 @@ export class ListaTarefasComponent implements OnInit {
     id: [0],
     descricao: ['', Validators.required],
     statusFinalizado: [false, Validators.required],
-    categoria: ['Casa', Validators.required],
-    prioridade: ['Alta', Validators.required],
+    categoria: ['', Validators.required],
+    prioridade: ['', Validators.required],
   });
 
   constructor(
