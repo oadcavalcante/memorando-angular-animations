@@ -6,6 +6,7 @@ import {
   animate,
   keyframes,
   group,
+  query,
 } from '@angular/animations';
 
 export const highlightedStateTrigger = trigger('highlightedState', [
@@ -93,59 +94,63 @@ export const filterTrigger = trigger('filterAnimation', [
 
 export const formButtonTrigger = trigger('formButton', [
   transition('invalid => valid', [
-    group([
+    query('#botao-salvar', [
+      group([
+        animate(
+          200,
+          style([
+            {
+              backgroundColor: '#63B77C',
+            },
+          ])
+        ),
+        animate(
+          100,
+          style([
+            {
+              transform: 'scale(1.1)',
+            },
+          ])
+        ),
+      ]),
       animate(
         200,
         style([
           {
-            backgroundColor: '#63B77C',
-          },
-        ])
-      ),
-      animate(
-        100,
-        style([
-          {
-            transform: 'scale(1.1)',
+            transform: 'scale(1)',
           },
         ])
       ),
     ]),
-    animate(
-      200,
-      style([
-        {
-          transform: 'scale(1)',
-        },
-      ])
-    ),
   ]),
   transition('valid => invalid', [
-    group([
+    query('#botao-salvar', [
+      group([
+        animate(
+          200,
+          style([
+            {
+              backgroundColor: '#6C757D',
+            },
+          ])
+        ),
+        animate(
+          100,
+          style([
+            {
+              transform: 'scale(1.1)',
+            },
+          ])
+        ),
+      ]),
       animate(
         200,
         style([
           {
-            backgroundColor: '#6C757D',
-          },
-        ])
-      ),
-      animate(
-        100,
-        style([
-          {
-            transform: 'scale(1.1)',
+            transform: 'scale(1)',
           },
         ])
       ),
     ]),
-    animate(
-      200,
-      style([
-        {
-          transform: 'scale(1)',
-        },
-      ])
-    ),
   ]),
 ]);
