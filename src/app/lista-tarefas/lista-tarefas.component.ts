@@ -10,6 +10,7 @@ import {
   filterTrigger,
   formButtonTrigger,
   shakeTrigger,
+  listStateTrigger,
 } from '../animations';
 import { Subscription } from 'rxjs';
 
@@ -24,6 +25,7 @@ import { Subscription } from 'rxjs';
     filterTrigger,
     formButtonTrigger,
     shakeTrigger,
+    listStateTrigger,
   ],
 })
 export class ListaTarefasComponent implements OnInit {
@@ -36,7 +38,7 @@ export class ListaTarefasComponent implements OnInit {
   campoBusca = '';
   tarefasFiltradas: Tarefa[] = [];
   tarefasSubscription: Subscription = new Subscription();
-  estadoBotao: string = 'unchecked'
+  estadoBotao: string = 'unchecked';
 
   formulario: FormGroup = this.fomBuilder.group({
     id: [0],
@@ -136,10 +138,10 @@ export class ListaTarefasComponent implements OnInit {
     this.id = tarefa.id;
     this.service.atualizarStatusTarefa(tarefa);
 
-    if(tarefa.statusFinalizado == true) {
-      this.estadoBotao = 'checked'
+    if (tarefa.statusFinalizado == true) {
+      this.estadoBotao = 'checked';
     } else {
-      this.estadoBotao = 'unchecked'
+      this.estadoBotao = 'unchecked';
     }
   }
 
