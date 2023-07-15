@@ -28,7 +28,7 @@ import {
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
-  formAberto: boolean = true;
+  formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
   indexTarefa: number = -1; //-1 para que nenhuma tarefa inicie destacada(highlighted)
