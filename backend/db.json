@@ -25,40 +25,19 @@
       "id": 5,
       "descricao": "Trocar lâmpada",
       "categoria": "Casa",
-      "statusFinalizado": true,
+      "statusFinalizado": false,
       "prioridade": "Alta"
     },
     {
       "id": 6,
       "descricao": "Ler",
-      "statusFinalizado": true,
+      "statusFinalizado": false,
       "categoria": "Estudos",
       "prioridade": "Alta"
     },
     {
       "id": 7,
       "descricao": "Cadastrar produtos na loja",
-      "statusFinalizado": true,
-      "categoria": "Trabalho",
-      "prioridade": "Alta"
-    },
-    {
-      "id": 8,
-      "descricao": "rtsf",
-      "statusFinalizado": false,
-      "categoria": "Casa",
-      "prioridade": "Alta"
-    },
-    {
-      "id": 9,
-      "descricao": "safdfdasf",
-      "statusFinalizado": false,
-      "categoria": "Casa",
-      "prioridade": "Alta"
-    },
-    {
-      "id": 10,
-      "descricao": "asdasdas",
       "statusFinalizado": false,
       "categoria": "Trabalho",
       "prioridade": "Alta"
