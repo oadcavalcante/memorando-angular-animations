@@ -41,6 +41,20 @@
       "statusFinalizado": false,
       "categoria": "Trabalho",
       "prioridade": "Alta"
+    },
+    {
+      "id": 8,
+      "descricao": "Tarefa 01",
+      "categoria": "Casa",
+      "statusFinalizado": false,
+      "prioridade": "Alta"
+    },
+    {
+      "id": 9,
+      "descricao": "Tarefa 02",
+      "categoria": "Trabalho",
+      "statusFinalizado": false,
+      "prioridade": "Normal"
     }
   ]
 }
